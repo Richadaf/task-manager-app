@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# Task Manager App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Build Status](https://img.shields.io/github/actions/workflow/status/richadaf/task-manager-app/ci.yml?branch=main)](https://github.com/richadaf/task-manager-app/actions)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/richadaf/task-manager-app/blob/main/LICENSE)
+![IsMaintained](https://img.shields.io/badge/Maintained%3F-no-red.svg)
+![AMA](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)
+![StarMe](https://img.shields.io/github/stars/richadaf/task-manager-app.svg)
+![Follow](https://img.shields.io/github/followers/richadaf.svg?style=social&label=Follow&maxAge=2592000)
+![IssuesFound](https://img.shields.io/github/issues/richadaf/task-manager-app.svg)
 
-## Available Scripts
+A React-based Task Manager application that allows users to **create**, **view**, **update**, and **delete** tasks. The tasks are persisted in the browser's Local Storage. The UI is styled with Tailwind CSS, and unit tests are written using Jest.
 
-In the project directory, you can run:
+## Features
+1. **Task Management**: 
+   - Create new tasks (title, description, due date, priority, status).
+   - Edit existing tasks.
+   - Delete tasks.
+   - View a list of all tasks.
+2. **Local Storage**: 
+   - Tasks are saved in `localStorage` to persist between sessions.
+3. **Filtering**:
+   - Filter tasks by priority (low, medium, high).
+   - Filter tasks by status (pending, in progress, completed).
+4. **Responsive UI**: 
+   - Uses Tailwind CSS for a clean and responsive design.
+5. **Testing**:
+   - Unit tests for critical components using Jest and React Testing Library.
 
-### `yarn start`
+## Project Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```
+task-manager-app
+├── README.md
+├── package.json
+├── tailwind.config.js
+├── yarn.lock
+├── public
+└── src
+    ├── __tests__
+    │   └── TaskManager.test.js
+    ├── App.js
+    ├── index.js
+    ├── index.css
+    └── components
+        ├── TaskManager.js
+        ├── TaskForm.js
+        ├── TaskFilter.js
+        └── TaskList.js
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Setup Instructions
 
-### `yarn test`
+1. **Install Dependencies**  
+   ```bash
+   cd task-manager-app
+   yarn
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **Run the Application**  
+   ```bash
+   yarn start
+   ```
+   - Open [http://localhost:3000](http://localhost:3000) to view in the browser.
 
-### `yarn build`
+3. **Run Tests**  
+   ```bash
+   yarn test
+   ```
+   - Launches the test runner in watch mode. Press `q` to quit.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. **Build for Production**  
+   ```bash
+   yarn build
+   ```
+   - Builds the app for production to the `build` folder.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Additional Information
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Tailwind CSS is configured via `tailwind.config.js`.
+- Jest and React Testing Library are included by default with Create React App.
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to customize the project as you see fit.
